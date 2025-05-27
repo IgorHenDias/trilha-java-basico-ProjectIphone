@@ -8,7 +8,8 @@ import lombok.Setter;
 public class Internet {
     private String url;
 
-    public void ExibirPagina() {
+    public void ExibirPagina(String url) {
+        this.url = url;
         System.out.println("Exibindo Página " + url);
     }
 
@@ -19,4 +20,5 @@ public class Internet {
     public void atualizarPagina() {
         System.out.println("Atualizando Pagina");
     }
+
 }

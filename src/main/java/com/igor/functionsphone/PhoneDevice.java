@@ -8,9 +8,11 @@ import lombok.Setter;
 @Getter
 public class PhoneDevice {
     String nome;
+    String numero;
 
-    public void ligar() {
-        System.out.println("Ligando " + nome);
+    public void ligar(String numero) {
+        this.numero = numero;
+        System.out.println("Ligando " + numero);
     }
 
     public void atender() {

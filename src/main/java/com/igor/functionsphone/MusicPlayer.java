@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class MusicPlayer {
-    String musica;
+    private String musica;
 
     public void tocarMusica() {
         System.out.println("Tocando Música");
@@ -17,7 +17,8 @@ public class MusicPlayer {
         System.out.println("Pausando música");
     }
 
-    public void selecionarMusica() {
+    public void selecionarMusica(String musica) {
+        this.musica = musica;
         System.out.println("Musica escolhida: " + musica);
     }
 }

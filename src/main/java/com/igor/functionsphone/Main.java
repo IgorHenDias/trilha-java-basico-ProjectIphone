@@ -56,7 +56,7 @@ public class Main {
                 case 1:
                     System.out.print("Nome da música: ");
                     String musica = sc.nextLine();
-                    celular.getReprodutor().selecionarMusica();
+                    celular.getReprodutor().selecionarMusica(musica);
                     break;
                 case 2:
                     celular.getReprodutor().tocarMusica();
@@ -88,8 +88,8 @@ public class Main {
             switch (opcao) {
                 case 1:
                     System.out.print("Número de telefone: ");
-                    String telefone = sc.nextLine();
-                    celular.getTelefone().ligar();
+                    String numero = sc.nextLine();
+                    celular.getTelefone().ligar(numero);
                     break;
                 case 2:
                     celular.getTelefone().atender();
@@ -109,7 +109,7 @@ public class Main {
     private static void menuNavegador(Scanner sc, SmartPhone celular) {
         int opcao;
         do {
-            System.out.println("\n=== Navegador de main.java.main.java.com.igor.functionsphone.Internet ===");
+            System.out.println("\n=== Navegador de Internet ===");
             System.out.println("1. Exibir página");
             System.out.println("2. Adicionar nova aba");
             System.out.println("3. Atualizar página");
@@ -122,8 +122,7 @@ public class Main {
                 case 1:
                     System.out.print("URL: ");
                     String url = sc.nextLine();
-                    celular.getNavegador().ExibirPagina();
-                    break;
+                    celular.getNavegador().ExibirPagina(url);
                 case 2:
                     celular.getNavegador().adicionarNovaAba();
                     break;
